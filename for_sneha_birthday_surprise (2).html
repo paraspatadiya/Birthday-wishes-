@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff0f5">
+<title>For Sneha — A Special Birthday Surprise 💖</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Caveat:wght@600;700&display=swap');
+
+:root {
+  --ink: #39283b;
+  --muted: #806b7e;
+  --pink: #ff7eaa;
+  --rose: #ffe0eb;
+  --cream: #fffaf5;
+  --purple: #b9a4ed;
+  --deep: #a64c78;
+  --gold: #f4c463;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  background: linear-gradient(145deg, #fff8f3, #fff0f6, #f5efff, #fff0f6);
+  background-size: 300% 300%;
+  animation: bg 18s ease infinite;
+  overflow-x: hidden;
+}
+@keyframes bg { 50% { background-position: 100% 50%; } }
+
+h1, h2, h3, .script { font-family: 'Playfair Display', serif; }
+.handwritten { font-family: 'Caveat', cursive; }
+.wrap { width: min(1100px, 92%); margin: auto; position: relative; z-index: 2; }
+
+/* Progress bar */
+#progress {
+  position: fixed; top: 0; left: 0; height: 5px; width: 0;
+  background: linear-gradient(90deg, #f17ca7, #bd91dc, #ffc477);
+  z-index: 100; border-radius: 0 4px 4px 0; box-shadow: 0 0 10px #f17ca7aa;
+}
+
+/* Background layers */
+#fx { position: fixed; inset: 0; pointer-events: none; z-index: 1; overflow: hidden; }
+.sparkle { position: absolute; opacity: 0.5; animation: float 7s ease-in-out infinite; }
+@keyframes float { 50% { transform: translateY(-22px) rotate(18deg); } }
+
+.balloon {
+  position: absolute; bottom: -140px; width: 54px; height: 68px;
+  border-radius: 50% 50% 48% 48%; opacity: 0.55; animation: rise linear infinite;
+}
+.balloon:after { content: ""; position: absolute; left: 50%; top: 100%; width: 1.5px; height: 50px; background: #c9a5b9aa; }
+.balloon:before { content: ""; position: absolute; left: 50%; top: 97%; transform: translateX(-50%); border: 5px solid transparent; border-bottom-color: inherit; }
+@keyframes rise { to { transform: translateY(-130vh) translateX(var(--dx, 30px)) rotate(8deg); } }
+
+.trail { position: fixed; pointer-events: none; z-index: 90; font-size: 14px; animation: trail .9s forwards; }
+@keyframes trail { to { transform: translateY(24px) scale(.2) rotate(120deg); opacity: 0; } }
+#confetti { position: fixed; inset: 0; pointer-events: none; z-index: 95; }
+
+/* Nav */
+nav { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; color: var(--muted); font-size: .9rem; }
+.brand { font-weight: 700; color: var(--deep); letter-spacing: .04em; display: flex; align-items: center; gap: 8px; font-size: 1.1rem; }
+.nav-links { display: flex; gap: 18px; font-size: .88rem; font-weight: 500; }
+.nav-links a { color: var(--muted); text-decoration: none; transition: .2s; }
+.nav-links a:hover { color: var(--deep); }
+
+/* Hero Section */
+.hero { min-height: 88vh; display: grid; place-items: center; text-align: center; padding: 40px 0 70px; position: relative; }
+.hero-avatar-wrap {
+  position: relative; margin: 0 auto 20px; width: 150px; height: 150px; cursor: pointer;
+}
+.hero-avatar {
+  width: 150px; height: 150px; border-radius: 50%;
+  border: 4px solid #fff; box-shadow: 0 12px 35px #a64c7844, 0 0 0 6px #ff7eaa44;
+  animation: pulse-ring 3s infinite; overflow: hidden; background: #fff;
+}
+.hero-avatar img { width: 100%; height: 100%; object-fit: cover; }
+@keyframes pulse-ring {
+  0% { box-shadow: 0 12px 35px #a64c7844, 0 0 0 0px #ff7eaa66; }
+  70% { box-shadow: 0 12px 35px #a64c7844, 0 0 0 14px #ff7eaa00; }
+  100% { box-shadow: 0 12px 35px #a64c7844, 0 0 0 0px #ff7eaa00; }
+}
+.badge-crown {
+  position: absolute; top: -12px; right: -8px; background: #fff; border-radius: 50%;
+  width: 44px; height: 44px; display: grid; place-items: center; font-size: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.12); animation: wiggle 3s infinite ease-in-out;
+}
+
+.pill {
+  display: inline-flex; gap: 8px; align-items: center; background: #fffb;
+  backdrop-filter: blur(6px); border: 1px solid #f5d8e5; padding: 9px 18px;
+  border-radius: 99px; color: #a34d78; font-size: .85rem; font-weight: 600;
+  animation: pop .8s both; margin-bottom: 15px;
+}
+h1 { font-size: clamp(3.2rem, 8.5vw, 6.5rem); line-height: .98; margin: 12px 0 16px; letter-spacing: -.045em; }
+h1 .line { display: block; overflow: hidden; }
+h1 .line>span { display: inline-block; animation: slideUp 1s cubic-bezier(.2,.8,.2,1) both; }
+h1 .line:nth-child(2)>span { animation-delay: .25s; }
+h1 em {
+  background: linear-gradient(110deg, #e56e9c, #b58ae0, #ffa36c, #e56e9c);
+  background-size: 250%; -webkit-background-clip: text; background-clip: text;
+  color: transparent; animation: shine 5s linear infinite; font-style: italic; padding-right: .1em;
+}
+@keyframes shine { to { background-position: 250%; } }
+@keyframes slideUp { from { transform: translateY(110%) rotate(4deg); opacity: 0; } }
+@keyframes pop { from { transform: scale(.7); opacity: 0; } }
+
+.hero p { max-width: 600px; margin: 0 auto; color: var(--muted); font-size: 1.1rem; line-height: 1.8; }
+.typed { min-height: 1.8em; font-family: 'Caveat', cursive; font-size: 1.8rem!important; color: #c2578a!important; font-weight: 700; }
+.typed:after { content: "|"; animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+.actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 28px; }
+button, .btn {
+  border: 0; border-radius: 99px; padding: 14px 28px; font: 600 .95rem 'DM Sans';
+  cursor: pointer; transition: .25s; text-decoration: none; display: inline-flex; align-items: center; gap: 9px;
+}
+button:hover, .btn:hover { transform: translateY(-3px) scale(1.03); }
+button:active { transform: scale(.97); }
+.primary {
+  background: linear-gradient(120deg, #f17ca7, #bd91dc); color: #fff;
+  box-shadow: 0 12px 25px #e88bb344; position: relative; overflow: hidden;
+}
+.primary:after {
+  content: ""; position: absolute; top: 0; left: -80%; width: 50%; height: 100%;
+  background: linear-gradient(100deg, transparent, #fff7, transparent);
+  transform: skewX(-20deg); animation: sweep 3.5s infinite;
+}
+@keyframes sweep { to { left: 140%; } }
+.secondary { background: #fff; border: 1px solid #f0d7e4; color: #9a5578; box-shadow: 0 8px 20px #8d5c7610; }
+
+.scroll { position: absolute; bottom: 20px; color: #a78a9e; font-size: .8rem; letter-spacing: .12em; animation: bob 2s ease-in-out infinite; font-weight: 600; }
+@keyframes bob { 50% { transform: translateY(8px); } }
+.hero-heart { position: absolute; font-size: 2.2rem; animation: float 5s ease-in-out infinite; opacity: .8; }
+
+/* General Sections */
+section { padding: 76px 0; }
+.reveal { opacity: 0; transform: translateY(40px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); }
+.reveal.in { opacity: 1; transform: none; }
+.section-head { text-align: center; margin-bottom: 42px; }
+.eyebrow { color: #d16d98; text-transform: uppercase; letter-spacing: .16em; font-size: .78rem; font-weight: 700; }
+h2 { font-size: clamp(2.2rem, 5vw, 3.5rem); margin: 8px 0; color: var(--ink); }
+.section-head p { color: var(--muted); margin: 0; font-size: 1.05rem; }
+
+/* Cards Grid */
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card {
+  background: #ffffffc0; backdrop-filter: blur(6px); border: 1px solid #f5dfeb;
+  border-radius: 24px; padding: 28px; box-shadow: 0 14px 40px #8d5c7618;
+  transition: transform .3s, box-shadow .3s; transform-style: preserve-3d; overflow: hidden; position: relative;
+}
+.card:hover { box-shadow: 0 22px 50px #8d5c7635; }
+.card .emoji { font-size: 2.5rem; display: inline-block; animation: wiggle 3s ease-in-out infinite; }
+@keyframes wiggle { 0%,100% { transform: rotate(-8deg); } 50% { transform: rotate(8deg) scale(1.1); } }
+.card h3 { margin: 14px 0 8px; font-size: 1.35rem; color: var(--deep); }
+.card p { color: var(--muted); line-height: 1.7; margin: 0; font-size: .95rem; }
+
+/* Marquee */
+.marquee {
+  overflow: hidden; padding: 18px 0; background: linear-gradient(90deg, #ffd3e4, #e8dcff, #ffe3c8);
+  transform: rotate(-1.2deg); margin: 30px -5vw; position: relative; z-index: 2; box-shadow: 0 8px 20px #8d5c7615;
+}
+.marquee div {
+  display: flex; gap: 40px; white-space: nowrap; width: max-content;
+  animation: scrollx 28s linear infinite; font-family: 'Playfair Display', serif;
+  font-style: italic; font-size: 1.4rem; color: #8b4668; font-weight: 600;
+}
+@keyframes scrollx { to { transform: translateX(-50%); } }
+
+/* Flip Cards */
+.flips { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.flip { perspective: 900px; height: 210px; cursor: pointer; }
+.flip-in { position: relative; width: 100%; height: 100%; transition: transform .7s cubic-bezier(.3,1.3,.5,1); transform-style: preserve-3d; }
+.flip.on .flip-in { transform: rotateY(180deg); }
+.face {
+  position: absolute; inset: 0; backface-visibility: hidden; border-radius: 24px;
+  display: grid; place-items: center; text-align: center; padding: 22px; border: 1px solid #f5dfeb;
+}
+.front { background: linear-gradient(135deg, #fff, #ffeaf2); font-family: 'Playfair Display', serif; font-size: 1.25rem; color: var(--deep); box-shadow: 0 12px 30px #8d5c7615; }
+.front b { display: block; font-size: 2.5rem; margin-bottom: 6px; }
+.back { background: linear-gradient(135deg, #f17ca7, #bd91dc); color: #fff; transform: rotateY(180deg); line-height: 1.6; font-size: 1rem; font-weight: 500; }
+.hint { text-align: center; color: #a58e9f; font-size: .88rem; margin-top: 18px; font-weight: 500; }
+
+/* Meters */
+.meters { max-width: 760px; margin: auto; display: grid; gap: 22px; background: #ffffffb8; padding: 36px; border-radius: 28px; border: 1px solid #f5dfeb; box-shadow: 0 14px 40px #8d5c7618; }
+.meter label { display: flex; justify-content: space-between; font-weight: 600; font-size: .95rem; margin-bottom: 8px; color: var(--ink); }
+.bar { height: 16px; background: #f8e4ee; border-radius: 99px; overflow: hidden; }
+.fill { height: 100%; width: 0; border-radius: 99px; background: linear-gradient(90deg, #f17ca7, #bd91dc); transition: width 1.8s cubic-bezier(.2,.8,.2,1); position: relative; }
+.fill:after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, #fff3 0 8px, transparent 8px 16px); animation: stripe 1s linear infinite; }
+@keyframes stripe { to { background-position: 32px 0; } }
+
+/* SECTION 1: Moodboard & Aesthetic Grid */
+.mood-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 20px; }
+.mood-card {
+  position: relative; border-radius: 20px; overflow: hidden; height: 260px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 3px solid #fff; cursor: pointer; background: #fff;
+}
+.mood-card:hover { transform: translateY(-6deg); box-shadow: 0 18px 35px #a64c7830; }
+.mood-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.mood-card:hover img { transform: scale(1.08); }
+.mood-overlay {
+  position: absolute; inset: 0; background: linear-gradient(to top, rgba(57, 40, 59, 0.88) 0%, rgba(57,40,59,0.1) 60%);
+  display: flex; flex-direction: column; justify-content: flex-end; padding: 16px; color: #fff;
+}
+.mood-overlay h4 { margin: 0 0 4px; font-size: 1.15rem; font-family: 'Playfair Display', serif; }
+.mood-overlay p { margin: 0; font-size: .82rem; opacity: 0.95; }
+
+/* Timeline */
+.timeline { max-width: 800px; margin: auto; position: relative; padding-left: 36px; }
+.timeline:before { content: ""; position: absolute; left: 12px; top: 8px; bottom: 8px; width: 3.5px; background: linear-gradient(#f17ca7, #bd91dc); border-radius: 3px; }
+.tl { position: relative; background: #ffffffc0; border: 1px solid #f5dfeb; border-radius: 22px; padding: 24px 28px; margin-bottom: 24px; box-shadow: 0 10px 30px #8d5c7615; display: flex; gap: 20px; align-items: center; }
+.tl:before { content: ""; position: absolute; left: -32.5px; top: 30px; width: 16px; height: 16px; border-radius: 50%; background: #fff; border: 4px solid #f17ca7; box-shadow: 0 0 0 6px #f17ca722; }
+.tl-img { width: 85px; height: 85px; border-radius: 16px; flex-shrink: 0; border: 2px solid #fff; box-shadow: 0 6px 15px rgba(0,0,0,0.1); overflow: hidden; background: #fff; }
+.tl-img img { width: 100%; height: 100%; object-fit: cover; }
+.tl-content { flex-grow: 1; }
+.tl small { color: #d16d98; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; font-size: .74rem; }
+.tl h3 { margin: 4px 0 6px; font-size: 1.25rem; color: var(--deep); }
+.tl p { margin: 0; color: var(--muted); line-height: 1.65; font-size: .95rem; }
+
+/* Photo Gallery Wall with Polaroids */
+.gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.polaroid {
+  background: #fff; padding: 14px 14px 20px; border-radius: 10px;
+  box-shadow: 0 14px 30px #8d5c7625; transition: transform .35s ease, box-shadow .35s ease;
+  cursor: pointer; display: block; position: relative; border: 1px solid #f0e2eb;
+}
+.polaroid:nth-child(4n+1) { transform: rotate(-3deg); }
+.polaroid:nth-child(4n+2) { transform: rotate(2.5deg); }
+.polaroid:nth-child(4n+3) { transform: rotate(-2deg); }
+.polaroid:nth-child(4n+4) { transform: rotate(3deg); }
+.polaroid:hover { transform: rotate(0deg) scale(1.06); z-index: 5; box-shadow: 0 22px 45px #8d5c7640; }
+
+.ph { aspect-ratio: 4/5; background: linear-gradient(135deg, #ffe0eb, #e9dcff); border-radius: 6px; overflow: hidden; position: relative; display: flex; align-items: center; justify-content: center; }
+.ph img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+.polaroid:hover .ph img { transform: scale(1.05); }
+.polaroid span { display: block; text-align: center; font-family: 'Caveat', cursive; font-size: 1.35rem; margin-top: 10px; color: #7d5670; font-weight: 700; }
+
+/* Lightbox Modal */
+.lightbox {
+  position: fixed; inset: 0; background: rgba(30, 18, 32, 0.88); z-index: 200;
+  display: flex; justify-content: center; align-items: center; opacity: 0; pointer-events: none;
+  transition: opacity 0.3s ease; backdrop-filter: blur(8px); padding: 20px;
+}
+.lightbox.active { opacity: 1; pointer-events: auto; }
+.lightbox-content {
+  background: #fff; padding: 20px; border-radius: 16px; max-width: 500px; width: 100%;
+  text-align: center; box-shadow: 0 25px 60px rgba(0,0,0,0.5); transform: scale(0.9); transition: transform 0.3s ease;
+}
+.lightbox.active .lightbox-content { transform: scale(1); }
+.lightbox-frame { width: 100%; max-height: 400px; border-radius: 10px; overflow: hidden; background: #fff8fc; }
+.lightbox-frame img { width: 100%; height: 100%; object-fit: contain; }
+.lightbox-caption { font-family: 'Caveat', cursive; font-size: 1.8rem; color: var(--deep); margin-top: 14px; font-weight: 700; }
+.lightbox-close {
+  position: absolute; top: 20px; right: 25px; color: #fff; font-size: 2.5rem; cursor: pointer; line-height: 1;
+}
+
+/* SECTION: Bestie Awards */
+.awards-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.award-card {
+  background: linear-gradient(145deg, #ffffff, #fff5fa); border: 1px solid #f7d6e6;
+  border-radius: 22px; padding: 24px 18px; text-align: center; box-shadow: 0 10px 25px #8d5c7612;
+  transition: transform .3s; position: relative; overflow: hidden;
+}
+.award-card:hover { transform: translateY(-5deg); border-color: var(--pink); }
+.award-icon { font-size: 2.8rem; margin-bottom: 12px; display: inline-block; filter: drop-shadow(0 4px 8px #f4c46344); }
+.award-card h3 { font-size: 1.15rem; margin: 0 0 6px; color: var(--deep); }
+.award-card p { font-size: .88rem; color: var(--muted); margin: 0; line-height: 1.5; }
+.badge-winner {
+  position: absolute; top: 12px; right: -28px; background: linear-gradient(90deg, #f4c463, #ffa834);
+  color: #fff; font-size: .65rem; font-weight: 700; padding: 4px 30px; transform: rotate(45deg); text-transform: uppercase; letter-spacing: 1px;
+}
+
+/* SECTION: Birthday Playlist */
+.playlist-box {
+  background: linear-gradient(135deg, #39283b, #57395c); border-radius: 28px; padding: 32px;
+  color: #fff; max-width: 760px; margin: auto; box-shadow: 0 20px 45px rgba(57, 40, 59, 0.35);
+  display: flex; gap: 28px; align-items: center; position: relative; overflow: hidden;
+}
+.playlist-box:before {
+  content: ""; position: absolute; top: -50%; right: -20%; width: 300px; height: 300px;
+  background: radial-gradient(circle, #ff7eaa44 0%, transparent 70%); pointer-events: none;
+}
+.album-art {
+  width: 140px; height: 140px; border-radius: 20px; overflow: hidden; flex-shrink: 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4); border: 2px solid rgba(255,255,255,0.2); background: #fff;
+}
+.album-art img { width: 100%; height: 100%; object-fit: cover; }
+.player-details { flex-grow: 1; }
+.player-details h3 { font-size: 1.5rem; margin: 0 0 6px; color: #fff; }
+.player-details p { color: #d6b8d9; margin: 0 0 16px; font-size: .95rem; }
+.track-list { display: flex; flex-direction: column; gap: 10px; }
+.track-item {
+  background: rgba(255,255,255,0.08); border-radius: 12px; padding: 10px 16px;
+  display: flex; justify-content: space-between; align-items: center; font-size: .9rem;
+  transition: background 0.2s; cursor: pointer;
+}
+.track-item:hover, .track-item.active { background: rgba(255,255,255,0.2); }
+.track-item span { display: flex; align-items: center; gap: 10px; }
+
+/* SECTION: Daily Affirmation Wheel */
+.affirmation-box {
+  max-width: 650px; margin: auto; text-align: center; background: #ffffffc0; backdrop-filter: blur(8px);
+  border: 1px solid #f5dfeb; border-radius: 28px; padding: 40px 30px; box-shadow: 0 15px 35px #8d5c7615;
+}
+.compliment-card {
+  background: linear-gradient(135deg, #fffdfb, #fff0f6); border: 2px dashed #f17ca7;
+  border-radius: 20px; padding: 26px; min-height: 120px; display: grid; place-items: center;
+  font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--deep);
+  margin: 20px 0; font-style: italic; transition: all 0.3s ease;
+}
+
+/* Letter Envelope */
+.letter-area { max-width: 760px; margin: auto; text-align: center; }
+.envelope {
+  width: min(330px, 85vw); height: 210px; margin: 32px auto 18px; position: relative;
+  cursor: pointer; filter: drop-shadow(0 18px 20px #9e6b8428); transition: .25s; animation: envfloat 3s ease-in-out infinite;
+}
+@keyframes envfloat { 50% { transform: translateY(-8px); } }
+.envelope.open { animation: none; }
+.env-base { position: absolute; inset: 0; background: #f4a9c3; border-radius: 15px; overflow: hidden; }
+.env-base:before, .env-base:after { content: ""; position: absolute; bottom: 0; width: 0; height: 0; border-style: solid; }
+.env-base:before { left: 0; border-width: 105px 165px 0 0; border-color: #f9c4d6 transparent transparent; }
+.env-base:after { right: 0; border-width: 105px 0 0 165px; border-color: #ee96b6 transparent transparent; }
+.env-flap {
+  position: absolute; top: 0; left: 0; width: 0; height: 0;
+  border-left: 165px solid transparent; border-right: 165px solid transparent;
+  border-top: 125px solid #e987ac; transform-origin: top; transition: transform .6s; z-index: 3;
+}
+.seal { position: absolute; z-index: 4; left: 50%; top: 92px; transform: translateX(-50%); font-size: 2rem; transition: .3s; animation: beat 1.2s infinite; }
+@keyframes beat { 50% { transform: translateX(-50%) scale(1.25); } }
+.envelope.open .env-flap { transform: rotateX(180deg); z-index: 0; }
+.envelope.open .seal { opacity: 0; }
+.letter {
+  display: none; background: #fffdfb; border: 1px solid #f2dbe5; border-radius: 22px;
+  padding: 36px; text-align: left; line-height: 1.9; color: #66536a; box-shadow: 0 15px 40px #8d5c7620;
+  background-image: repeating-linear-gradient(transparent 0 33px, #f7e6ee 33px 34px); font-size: 1.05rem;
+}
+.letter.show { display: block; animation: rise2 .7s ease; }
+.letter p { margin: 0 0 16px; }
+.letter strong { color: #bb5e88; }
+@keyframes rise2 { from { opacity: 0; transform: translateY(20px) scale(.96); } }
+.tiny { font-size: .8rem; color: #a58e9f; }
+
+/* Wish Jar */
+.jar-wrap { text-align: center; }
+.jar { font-size: 7rem; cursor: pointer; display: inline-block; transition: .3s; filter: drop-shadow(0 12px 12px #c58eae44); animation: float 4s ease-in-out infinite; }
+.jar:hover { transform: scale(1.1) rotate(-6deg); }
+.jar.shake { animation: shake .5s; }
+@keyframes shake { 25% { transform: rotate(-14deg); } 75% { transform: rotate(14deg); } }
+.slip { max-width: 520px; margin: 22px auto 0; min-height: 96px; background: #fffdf3; border: 1px dashed #e8b9cd; border-radius: 16px; padding: 22px; font-family: 'Caveat', cursive; font-size: 1.7rem; color: #8b4668; box-shadow: 0 10px 24px #8d5c7618; transform: rotate(-1deg); font-weight: 700; }
+.slip.pop { animation: pop .5s; }
+
+/* Cake Section */
+.cake-wrap {
+  text-align: center; background: linear-gradient(130deg, #fff9fc, #f7f0ff);
+  border: 1px solid #f1deed; border-radius: 30px; padding: 46px 20px 40px; overflow: hidden; position: relative;
+}
+.cake { position: relative; width: 240px; margin: 0 auto 26px; padding-top: 70px; }
+.candles { position: absolute; top: 0; left: 0; right: 0; display: flex; justify-content: center; gap: 30px; height: 80px; }
+.candle { width: 12px; height: 44px; margin-top: 34px; background: repeating-linear-gradient(45deg, #fff 0 6px, #ff9dbd 6px 12px); border-radius: 3px; position: relative; cursor: pointer; }
+.flame {
+  position: absolute; left: 50%; top: -26px; width: 14px; height: 24px; margin-left: -7px;
+  background: radial-gradient(ellipse at 50% 75%, #fff6a8, #ffb347 55%, #ff6b6b);
+  border-radius: 50% 50% 50% 50%/65% 65% 35% 35%; transform-origin: 50% 90%;
+  animation: flicker .35s infinite alternate; box-shadow: 0 0 18px 6px #ffc86a88; transition: .4s;
+}
+@keyframes flicker { from { transform: scale(1,1) rotate(-3deg); } to { transform: scale(.88,1.1) rotate(3deg); } }
+.candle.out .flame { opacity: 0; transform: translateY(-12px) scale(.2); }
+.candle.out:after { content: ""; position: absolute; left: 50%; top: -30px; width: 6px; height: 6px; border-radius: 50%; background: #bbb9; animation: smoke 1.6s forwards; }
+@keyframes smoke { to { transform: translate(-4px,-40px) scale(4); opacity: 0; } }
+.tier { height: 52px; margin: 0 auto; border-radius: 12px 12px 6px 6px; position: relative; }
+.t1 { width: 130px; background: #ffb6cf; }
+.t2 { width: 190px; background: #f59bbd; margin-top: -4px; }
+.t3 { width: 240px; background: #e684a9; margin-top: -4px; }
+.tier:before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 16px; background: #fff; border-radius: 12px 12px 14px 14px/12px 12px 20px 20px; }
+.tier:after { content: "🍓 🍒 🍓 🍒"; position: absolute; left: 0; right: 0; bottom: 6px; font-size: .8rem; letter-spacing: 6px; }
+.plate { width: 290px; height: 12px; background: #fff; border-radius: 50%; margin: -2px auto 0; box-shadow: 0 8px 14px #c58eae44; }
+.cake-wrap p { color: var(--muted); }
+
+/* Ending */
+.big-end {
+  text-align: center; padding: 75px 24px; background: linear-gradient(135deg, #f9a8c6, #c7a8ee);
+  color: #fff; border-radius: 34px; position: relative; overflow: hidden; box-shadow: 0 20px 40px #8d5c7630;
+}
+.big-end h2 { margin: 0 0 12px; font-size: clamp(2.2rem, 6vw, 3.8rem); color: #fff; }
+.big-end p { margin: 0 auto 28px; max-width: 520px; opacity: .95; line-height: 1.8; font-size: 1.1rem; }
+.big-end .secondary { color: #a64c78; font-weight: 700; }
+footer { text-align: center; padding: 45px 15px 55px; color: #927b91; font-size: .95rem; position: relative; z-index: 2; }
+
+/* Responsive adjustments */
+@media(max-width: 860px) {
+  .cards, .flips, .gallery, .mood-grid, .awards-grid { grid-template-columns: repeat(2, 1fr); }
+  .playlist-box { flex-direction: column; text-align: center; }
+  .album-art { margin: 0 auto; }
+}
+@media(max-width: 600px) {
+  .cards, .flips, .gallery, .mood-grid, .awards-grid { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+  .hero { min-height: 75vh; padding-top: 20px; }
+  section { padding: 50px 0; }
+  .card { padding: 22px; }
+  .flip { height: 180px; }
+  .marquee div { font-size: 1.1rem; }
+  .tl { flex-direction: column; text-align: center; }
+  .tl:before { left: 50%; transform: translateX(-50%); top: -38px; }
+  .timeline { padding-left: 0; }
+  .timeline:before { display: none; }
+}
+@media(prefers-reduced-motion: reduce) {
+  *, *:before, *:after { scroll-behavior: auto!important; animation-duration: .01ms!important; animation-iteration-count: 1!important; transition-duration: .01ms!important; }
+  .reveal { opacity: 1; transform: none; }
+}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<div id="fx"></div>
+<canvas id="confetti"></canvas>
+
+<!-- Lightbox Modal -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close">&times;</span>
+  <div class="lightbox-content" onclick="event.stopPropagation()">
+    <div class="lightbox-frame" id="lightbox-frame">
+      <img id="lightbox-img" src="images/8.jpg" alt="Sneha photo" onerror="this.onerror=null;this.src='https://placehold.co/600x700/ffe0eb/a64c78?text=Sneha+♡';">
+    </div>
+    <div class="lightbox-caption" id="lightbox-caption">Sneha</div>
+  </div>
+</div>
+
+<div class="wrap">
+  <nav>
+    <div class="brand"><span>♡</span> FOR MY BETTUUDIIII</div>
+    <div class="nav-links">
+      <a href="#moodboard">Moodboard</a>
+      <a href="#reasons">Reasons</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#awards">Awards</a>
+      <a href="#letter-section">Letter</a>
+      <a href="#cake-section">Cake</a>
+    </div>
+  </nav>
+
+  <main>
+    <header class="hero">
+      <span class="hero-heart" style="left:6%;top:18%">💗</span>
+      <span class="hero-heart" style="right:7%;top:25%;animation-delay:1s">🎈</span>
+      <span class="hero-heart" style="left:10%;bottom:20%;animation-delay:2s">✨</span>
+      <span class="hero-heart" style="right:12%;bottom:24%;animation-delay:1.5s">🎀</span>
+      
+      <div>
+        <div class="hero-avatar-wrap">
+          <div class="hero-avatar" onclick="openLightbox('images/8.jpg', 'Certified Troublemaker & Silly Filter Smiles 👑')">
+            <img id="hero-img" src="images/8.jpg" alt="Sneha Hero Avatar" onerror="this.onerror=null;this.src='https://placehold.co/300x300/ffe0eb/a64c78?text=Sneha+👑';">
+          </div>
+          <div class="badge-crown">👑</div>
+        </div>
+        <div class="pill">🎀 A special surprise page created for a one-of-a-kind human</div>
+        <h1><span class="line"><span>Happy Birthday,</span></span><span class="line"><span><em>Sneha!</em></span></span></h1>
+        <p>Also known as my favorite little troublemaker… <strong>bettuudiiii</strong> 💗</p>
+        <p class="typed" id="typed"></p>
+        <div class="actions">
+          <button class="primary" onclick="go('#letter-section')">Open your surprise ♡</button>
+          <button class="secondary" onclick="celebrate(150)">A little celebration ✨</button>
+        </div>
+      </div>
+      <div class="scroll">SCROLL DOWN FOR YOUR SURPRISE ↓</div>
+    </header>
+
+    <!-- SECTION 1: SNEHA'S MOODBOARD -->
+    <section id="moodboard" class="reveal">
+      <div class="section-head">
+        <div class="eyebrow">Aesthetic & Vibe Check</div>
+        <h2>Sneha's Moodboard 🌸</h2>
+        <p>The core aesthetic vibes of bettuudiiii, perfectly captured.</p>
+      </div>
+      <div class="mood-grid">
+        <div class="mood-card" onclick="openLightbox('images/10.jpg', 'Traditional Garba Queen 🥻')">
+          <img id="mb-img1" src="images/10.jpg" alt="Traditional Queen" onerror="this.onerror=null;this.src='https://placehold.co/400x500/ffe0eb/a64c78?text=Garba+Glam';">
+          <div class="mood-overlay">
+            <h4>Traditional Queen 🥻</h4>
+            <p>Garba glam & silver jhumkas</p>
+          </div>
+        </div>
+        <div class="mood-card" onclick="openLightbox('images/5.jpg', 'Angel Energy & Pearl Elegance 🤍')">
+          <img id="mb-img2" src="images/5.jpg" alt="Angel Energy" onerror="this.onerror=null;this.src='https://placehold.co/400x500/ffe0eb/a64c78?text=Elegance';">
+          <div class="mood-overlay">
+            <h4>Angel Energy 🤍</h4>
+            <p>Elegance in white & subtle smiles</p>
+          </div>
+        </div>
+        <div class="mood-card" onclick="openLightbox('images/6.jpg', 'Yellow Sunshine Smile 💛')">
+          <img id="mb-img3" src="images/6.jpg" alt="Sunshine Smile" onerror="this.onerror=null;this.src='https://placehold.co/400x500/ffe0eb/a64c78?text=Sunshine';">
+          <div class="mood-overlay">
+            <h4>Sunshine Smile 💛</h4>
+            <p>Cozy yellow sweatshirt vibes</p>
+          </div>
+        </div>
+        <div class="mood-card" onclick="openLightbox('images/3.jpg', 'Late Night Video Calls & Banter 📞')">
+          <img id="mb-img4" src="images/3.jpg" alt="Video Call Vibe" onerror="this.onerror=null;this.src='https://placehold.co/400x500/ffe0eb/a64c78?text=Late+Night+Calls';">
+          <div class="mood-overlay">
+            <h4>Late Night Talks 📞</h4>
+            <p>Striped shrug & endless gossip</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: FACTS -->
+    <section id="friendship" class="reveal">
+      <div class="section-head">
+        <div class="eyebrow">A few important facts</div>
+        <h2>Things you should know 💌</h2>
+        <p>Official birthday announcement from your unofficial fan club.</p>
+      </div>
+      <div class="cards">
+        <article class="card tilt">
+          <div class="emoji">🌷</div>
+          <h3>One of a kind</h3>
+          <p>There is nobody quite like you. Keep being your wonderfully, unapologetically unique self!</p>
+        </article>
+        <article class="card tilt">
+          <div class="emoji">😂</div>
+          <h3>Certified chaos</h3>
+          <p>Your ability to turn an ordinary moment into a whole dramatic comedy deserves an Oscar. Never change, bettuuudiiii.</p>
+        </article>
+        <article class="card tilt">
+          <div class="emoji">✨</div>
+          <h3>My good-luck human</h3>
+          <p>I hope this year brings you the kind of happiness that sneaks up on you and makes you smile for no reason at all.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="marquee"><div id="marq"></div></div>
+
+<div class="wrap">
+  <!-- SECTION: REASONS -->
+  <section id="reasons" class="reveal">
+    <div class="section-head">
+      <div class="eyebrow">Tap cards to flip</div>
+      <h2>Why you're amazing 🌸</h2>
+      <p>Six reasons (there are way more, but the page has limits!).</p>
+    </div>
+    <div class="flips">
+      <div class="flip"><div class="flip-in"><div class="face front"><div><b>😊</b>Your smile</div></div><div class="face back">It can fix a bad day without even trying. Seriously, it's a superpower.</div></div></div>
+      <div class="flip"><div class="flip-in"><div class="face front"><div><b>🤣</b>Your laugh</div></div><div class="face back">The kind that's so contagious everyone around you ends up wheezing too.</div></div></div>
+      <div class="flip"><div class="flip-in"><div class="face front"><div><b>💪</b>Your strength</div></div><div class="face back">You handle tough things with more courage than you ever give yourself credit for.</div></div></div>
+      <div class="flip"><div class="flip-in"><div class="face front"><div><b>🫶</b>Your heart</div></div><div class="face back">So kind and caring. You make people feel like they truly matter.</div></div></div>
+      <div class="flip"><div class="flip-in"><div class="face front"><div><b>🎭</b>Your madness</div></div><div class="face back">Beautiful, random, perfectly pagal. Life is never boring around you.</div></div></div>
+      <div class="flip"><div class="flip-in"><div class="face front"><div><b>🌟</b>Just you</div></div><div class="face back">You don't need a fancy reason. You're Sneha, and that's already the best one.</div></div></div>
+    </div>
+    <div class="hint">psst… every card has a secret on the back 👀</div>
+  </section>
+
+  <!-- SECTION: SNEHA METER -->
+  <section id="meter" class="reveal">
+    <div class="section-head">
+      <div class="eyebrow">100% scientific evaluation</div>
+      <h2>The Sneha-meter 📊</h2>
+      <p>Official results from a very serious (completely accurate) study.</p>
+    </div>
+    <div class="meters">
+      <div class="meter"><label><span>Cuteness Level 🥰</span><span data-n="110">0%</span></label><div class="bar"><div class="fill" data-w="100"></div></div></div>
+      <div class="meter"><label><span>Chaos & Drama Energy 🌪️</span><span data-n="99">0%</span></label><div class="bar"><div class="fill" data-w="99"></div></div></div>
+      <div class="meter"><label><span>Best-Friend Quality 💞</span><span data-n="100">0%</span></label><div class="bar"><div class="fill" data-w="100"></div></div></div>
+      <div class="meter"><label><span>Ability to make me laugh 😂</span><span data-n="1000">0%</span></label><div class="bar"><div class="fill" data-w="100"></div></div></div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: BESTIE AWARDS -->
+  <section id="awards" class="reveal">
+    <div class="section-head">
+      <div class="eyebrow">Official Ceremonies</div>
+      <h2>Bestie Hall of Fame 🏆</h2>
+      <p>Awards Sneha has officially won this year!</p>
+    </div>
+    <div class="awards-grid">
+      <div class="award-card">
+        <div class="badge-winner">Winner</div>
+        <div class="award-icon">🥇</div>
+        <h3>Garba Sensation</h3>
+        <p>Awarded for looking absolute royalty in traditional chaniya choli!</p>
+      </div>
+      <div class="award-card">
+        <div class="badge-winner">Winner</div>
+        <div class="award-icon">👑</div>
+        <h3>Drama Queen of the Year</h3>
+        <p>For expressing every emotion with 200% enthusiasm and hilarious facial expressions.</p>
+      </div>
+      <div class="award-card">
+        <div class="badge-winner">Winner</div>
+        <div class="award-icon">💖</div>
+        <h3>24/7 Comfort Person</h3>
+        <p>For always listening, checking in, and being the warmest presence.</p>
+      </div>
+      <div class="award-card">
+        <div class="badge-winner">Winner</div>
+        <div class="award-icon">📱</div>
+        <h3>Late Night Chatter Box</h3>
+        <p>For holding record-length video calls about everything and nothing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: STORY TIMELINE -->
+  <section id="story" class="reveal">
+    <div class="section-head">
+      <div class="eyebrow">Our Memory Trail</div>
+      <h2>Moments I'm Grateful For 🕰️</h2>
+      <p>A peek through our favorite memories together.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl">
+        <div class="tl-img"><img id="tl-img1" src="images/1.jpg" alt="Pure Happiness" onerror="this.onerror=null;this.src='https://placehold.co/200x200/ffe0eb/a64c78?text=Beginning';"></div>
+        <div class="tl-content">
+          <small>The beginning</small>
+          <h3>Sweet Beginnings 🌱</h3>
+          <p>Somewhere along the way, random conversations turned into the sweetest friendship!</p>
+        </div>
+      </div>
+      <div class="tl">
+        <div class="tl-img"><img id="tl-img2" src="images/3.jpg" alt="Late Night Calls" onerror="this.onerror=null;this.src='https://placehold.co/200x200/ffe0eb/a64c78?text=Calls';"></div>
+        <div class="tl-content">
+          <small>The fun part</small>
+          <h3>Late Night Video Calls 📞</h3>
+          <p>Unfiltered chats, cool glasses, silly memes, and inside jokes that only we understand.</p>
+        </div>
+      </div>
+      <div class="tl">
+        <div class="tl-img"><img id="tl-img3" src="images/7.jpg" alt="Silly Filters & Heart Eyes" onerror="this.onerror=null;this.src='https://placehold.co/200x200/ffe0eb/a64c78?text=Chaos';"></div>
+        <div class="tl-content">
+          <small>The best part</small>
+          <h3>Certified Pagal Moments 😂</h3>
+          <p>Heart filters, funny expressions, and instant mood lifters whenever we talk.</p>
+        </div>
+      </div>
+      <div class="tl">
+        <div class="tl-img"><img id="tl-img4" src="images/11.jpg" alt="Sparkle & Fairytales" onerror="this.onerror=null;this.src='https://placehold.co/200x200/ffe0eb/a64c78?text=Today';"></div>
+        <div class="tl-content">
+          <small>Today & Forever</small>
+          <h3>Celebrating Special You 🎉</h3>
+          <p>And here we are, celebrating the one and only Sneha. Here's to making 1000 more hilarious memories!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO GALLERY SECTION WITH POLAROIDS -->
+  <section id="gallery" class="reveal">
+    <div class="section-head">
+      <div class="eyebrow">The Sneha Gallery</div>
+      <h2>Our Picture-Perfect Moments 📸</h2>
+      <p>Tap any polaroid to view it full size!</p>
+    </div>
+    <div class="gallery">
+      <div class="polaroid" onclick="openLightbox('images/1.jpg', 'pure happiness ✨')">
+        <div class="ph"><img id="pol-img1" src="images/1.jpg" alt="pure happiness ✨" onerror="this.onerror=null;this.src='https://placehold.co/400x500/ffe0eb/a64c78?text=Photo+1';"></div>
+        <span>pure happiness ✨</span>
+      </div>
+      <div class="polaroid" onclick="openLightbox('images/2.jpg', 'cute & casual 🌿')">
+        <div class="ph"><img id="pol-img2" src="images/2.jpg" alt="cute & casual 🌿" onerror="this.onerror=null;this.src='https://placehold.co/400x500/ffe0eb/a64c78?text=Photo+2';"></div>
+        <span>cute & casual 🌿</span>
+      </div>
+      <div class="polaroid" onclick="openLightbox('images/3.jpg', 'late night chats 📱')">
+        <div class="ph"><img id="pol-img3" src="images/3.jpg" alt="late night chats 📱" onerror="this.onerror=null;this.src='https://placehold.co/400x500/ffe0eb/a64c78?text=Photo+3';"></div>
+        <span>late night chats 📱</span>
+      </div>
+      <div class="polaroid" onclick="openLightbox('images/4.jpg', 'soft aesthetic 🤍')">
+        <div class="ph"><img id="pol-img4" src="images/4.jpg" alt="soft aesthetic 🤍" onerror="this.onerror=null;this.src='https://placehold.co/400x500/ffe0eb/a64c78?text=Photo+4';"></div>
+        <span>soft aesthetic 🤍</span>
+      </div>
+      <div class="polaroid" onclick="openLightbox('images/5.jpg', 'elegant queen 🌸')">
+        <div class="ph"><img id="pol-img5" src="images/5.jpg" alt="elegant queen 🌸" onerror="this.onerror=null;this.src='https://placehold.co/400x500/ffe0eb/a64c78?text=Photo+5';"></div>
+        <span>elegant queen 🌸</span>
+      </div>
+      <div class="polaroid" onclick="openLightbox('images/6.jpg', 'cozy yellow fit 💛')">
+        <div class="ph"><img id="pol-img6" src="images/6.jpg" alt="cozy yellow fit 💛" onerror="this.onerror=null;this.src='https://placehold.co/400x500/ffe0eb/a64c78?text=Photo+6';"></div>
+        <span>cozy yellow fit 💛</span>
+      </div>
+      <div class="polaroid" onclick="openLightbox('images/7.jpg', 'heart eyes filter 🥰')">
+        <div class="ph"><img id="pol-img7" src="images/7.jpg" alt="heart eyes filter 🥰" onerror="this.onerror=null;this.src='https://placehold.co/400x500/ffe0eb/a64c78?text=Photo+7';"></div>
+        <span>heart eyes filter 🥰</span>
+      </div>
+      <div class="polaroid" onclick="openLightbox('images/8.jpg', 'certified chaos 🤪')">
+        <div class="ph"><img id="pol-img8" src="images/8.jpg" alt="certified chaos 🤪" onerror="this.onerror=null;this.src='https://placehold.co/400x500/ffe0eb/a64c78?text=Photo+8';"></div>
+        <span>certified chaos 🤪</span>
+      </div>
+      <div class="polaroid" onclick="openLightbox('images/9.jpg', 'festive vibes ❤️')">
+        <div class="ph"><img id="pol-img9" src="images/9.jpg" alt="festive vibes ❤️" onerror="this.onerror=null;this.src='https://placehold.co/400x500/ffe0eb/a64c78?text=Photo+9';"></div>
+        <span>festive vibes ❤️</span>
+      </div>
+      <div class="polaroid" onclick="openLightbox('images/10.jpg', 'garba glam ✨')">
+        <div class="ph"><img id="pol-img10" src="images/10.jpg" alt="garba glam ✨" onerror="this.onerror=null;this.src='https://placehold.co/400x500/ffe0eb/a64c78?text=Photo+10';"></div>
+        <span>garba glam ✨</span>
+      </div>
+      <div class="polaroid" onclick="openLightbox('images/11.jpg', 'fairytales & lights 🌌')">
+        <div class="ph"><img id="pol-img11" src="images/11.jpg" alt="fairytales & lights 🌌" onerror="this.onerror=null;this.src='https://placehold.co/400x500/ffe0eb/a64c78?text=Photo+11';"></div>
+        <span>fairytales & lights 🌌</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: AFFIRMATION GENERATOR -->
+  <section id="affirmations" class="reveal">
+    <div class="section-head">
+      <div class="eyebrow">Daily Boost</div>
+      <h2>Compliment Generator 🎡</h2>
+      <p>Tap the button whenever you need a quick reminder of how awesome you are!</p>
+    </div>
+    <div class="affirmation-box">
+      <div class="compliment-card" id="compliment-text">
+        "Sneha, your laugh is literally the quickest mood-booster in existence! 😂"
+      </div>
+      <button class="primary" onclick="generateCompliment()">Get Another Compliment ✨</button>
+    </div>
+  </section>
+
+  <!-- SECTION: LETTER -->
+  <section id="letter-section" class="reveal">
+    <div class="section-head">
+      <div class="eyebrow">A note from the heart</div>
+      <h2>You Have a Letter 💗</h2>
+      <p>Tap the envelope to open. No peeking before opening! 👀</p>
+    </div>
+    <div class="letter-area">
+      <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open birthday letter" onclick="openLetter()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLetter()}">
+        <div class="env-base"></div>
+        <div class="env-flap"></div>
+        <div class="seal">💌</div>
+      </div>
+      <div class="tiny" id="tap-hint">Psst… tap the envelope to open it</div>
+      <div class="letter" id="letter">
+        <p>Dear <strong>Sneha (my bettuudiiii)</strong>,</p>
+        <p>Happy Birthday! 🥳✨</p>
+        <p>I hope you know how truly special you are to everyone around you. Thank you for being your unfiltered self — for all the ridiculous laughs, the late-night video chats, the silly crown filters, the garba glam, and all the little moments that make our friendship so precious.</p>
+        <p>On your birthday, I wish you endless reasons to smile, unwavering strength for all your goals, peace of mind, delicious cake, and dreams that come true one by one.</p>
+        <p>Keep shining bright, keep laughing loud, and please keep being the adorable, wonderfully pagal human you are. The world is so much brighter with you in it!</p>
+        <p><strong>Wishing you tons of love, health, and happiness today and always! 💗</strong></p>
+        <p>With lots of care & high-fives,<br>Your bestie ♡</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: WISH JAR -->
+  <section id="jar" class="reveal">
+    <div class="section-head">
+      <div class="eyebrow">Little wishes</div>
+      <h2>The Wish Jar 🫙</h2>
+      <p>Tap the jar to pull out a secret wish just for you.</p>
+    </div>
+    <div class="jar-wrap">
+      <div class="jar" id="jarEl" onclick="pullWish()">🫙</div>
+      <div class="slip" id="slip">Tap the jar ✨</div>
+    </div>
+  </section>
+
+  <!-- SECTION: CAKE -->
+  <section id="cake-section" class="reveal">
+    <div class="section-head">
+      <div class="eyebrow">Make a wish</div>
+      <h2>One More Thing… 🎂</h2>
+    </div>
+    <div class="cake-wrap">
+      <div class="cake">
+        <div class="candles">
+          <div class="candle"><div class="flame"></div></div>
+          <div class="candle"><div class="flame"></div></div>
+          <div class="candle"><div class="flame"></div></div>
+        </div>
+        <div class="tier t1"></div><div class="tier t2"></div><div class="tier t3"></div>
+        <div class="plate"></div>
+      </div>
+      <p id="wish-text">Close your eyes, make a wish, then tap the candles (or the button below) to blow them out!</p>
+      <button class="primary" id="wish-button" onclick="blowCandles()">I made a wish! ✨</button>
+      <p class="tiny">May this upcoming year be ridiculously kind and sweet to you!</p>
+    </div>
+  </section>
+
+  <!-- SECTION: ENDING -->
+  <section class="reveal">
+    <div class="big-end">
+      <h2>Once again… Happy Birthday Sneha! 🎉</h2>
+      <p>Thank you for bringing so much joy into the world. Here's to non-stop laughter, unforgettable adventures, and a year full of happiness!</p>
+      <button class="secondary" onclick="celebrate(200)">One last grand celebration 🎊</button>
+    </div>
+  </section>
+</div>
+
+<footer>
+  Made with ♡ for Sneha — my one and only bettuuudiiii.<br>
+  <span class="tiny">P.S. You are loved more than this webpage could ever measure.</span>
+</footer>
+
+<script>
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const reduce = matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+function go(sel) { $(sel).scrollIntoView({ behavior: 'smooth' }); }
+
+/* Background sparkles & balloons */
+(function(){
+  const fx = $('#fx'), syms = ['✦','♡','✧','✿','✨','💖'];
+  for(let i = 0; i < 20; i++){
+    const s = document.createElement('span'); s.className = 'sparkle';
+    s.textContent = syms[i % syms.length];
+    s.style.cssText = `left:${Math.random()*96}%;top:${Math.random()*95}%;font-size:${12+Math.random()*18}px;animation-delay:${Math.random()*5}s;animation-duration:${5+Math.random()*5}s;color:#f17ca7aa`;
+    fx.appendChild(s);
+  }
+  if(reduce) return;
+  const cols = ['#ffb3cd','#d3bcf5','#ffd6a5','#b9e3f5','#ffc2d9'];
+  for(let i = 0; i < 10; i++){
+    const b = document.createElement('div'); b.className = 'balloon';
+    b.style.cssText = `left:${5+Math.random()*90}%;background:${cols[i%cols.length]};border-bottom-color:${cols[i%cols.length]};animation-duration:${18+Math.random()*16}s;animation-delay:${-Math.random()*25}s;--dx:${(Math.random()*80-40)}px;transform:scale(${.7+Math.random()*.6})`;
+    fx.appendChild(b);
+  }
+})();
+
+/* Cursor Trail */
+let lastT = 0;
+addEventListener('pointermove', e => {
+  if(reduce || e.pointerType === 'touch') return;
+  const n = Date.now(); if(n - lastT < 65) return; lastT = n;
+  const t = document.createElement('span'); t.className = 'trail';
+  t.textContent = ['✦','♡','✧','💖'][Math.floor(Math.random()*4)];
+  t.style.cssText = `left:${e.clientX}px;top:${e.clientY}px;color:${['#f17ca7','#bd91dc','#ffb347','#ff7eaa'][Math.floor(Math.random()*4)]}`;
+  document.body.appendChild(t); setTimeout(() => t.remove(), 900);
+});
+
+/* Scroll progress bar */
+addEventListener('scroll', () => {
+  const h = document.documentElement;
+  $('#progress').style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
+}, { passive: true });
+
+/* Typewriter Effect */
+(function(){
+  const lines = [
+    'Welcome to your special birthday corner! 💝',
+    'Ready for your little surprise?',
+    'Garba queen, certified pagal, and bestie forever ✨',
+    'Scroll down to explore all your surprises…'
+  ];
+  let l = 0, c = 0, del = false; const el = $('#typed');
+  function tick(){
+    const txt = lines[l];
+    el.textContent = txt.slice(0, c);
+    if(!del && c < txt.length){ c++; setTimeout(tick, 55); }
+    else if(!del){ del = true; setTimeout(tick, 1700); }
+    else if(c > 0){ c--; setTimeout(tick, 25); }
+    else { del = false; l = (l + 1) % lines.length; setTimeout(tick, 400); }
+  }
+  tick();
+})();
+
+/* Marquee text generator */
+(function(){
+  const words = ['Happy Birthday Sneha 🎉', '♡', 'Bettuudiiii ✨', '✦', 'Garba Queen 💃', '✿', 'Keep Shining 🌟', '✧'];
+  const html = words.map(w => `<span>${w}</span>`).join('');
+  $('#marq').innerHTML = html + html + html + html;
+})();
+
+/* Scroll reveal & animated percentage meters */
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if(!e.isIntersecting) return;
+  e.target.classList.add('in');
+  e.target.querySelectorAll('.fill').forEach(f => f.style.width = f.dataset.w + '%');
+  e.target.querySelectorAll('[data-n]').forEach(s => {
+    const to = +s.dataset.n; let v = 0;
+    const step = () => {
+      v += Math.max(1, to / 60);
+      if(v >= to){ s.textContent = to + '%'; }
+      else { s.textContent = Math.floor(v) + '%'; requestAnimationFrame(step); }
+    };
+    step();
+  });
+  io.unobserve(e.target);
+}), { threshold: .15 });
+$$('.reveal').forEach(el => io.observe(el));
+
+/* 3D Tilt for cards */
+$$('.tilt').forEach(c => {
+  c.addEventListener('pointermove', e => {
+    if(e.pointerType === 'touch' || reduce) return;
+    const r = c.getBoundingClientRect(), x = (e.clientX - r.left)/r.width - .5, y = (e.clientY - r.top)/r.height - .5;
+    c.style.transform = `perspective(700px) rotateY(${x*10}deg) rotateX(${-y*10}deg) translateY(-4px)`;
+  });
+  c.addEventListener('pointerleave', () => c.style.transform = '');
+});
+
+/* Flip card interactions */
+$$('.flip').forEach(f => f.addEventListener('click', () => f.classList.toggle('on')));
+
+/* Lightbox Functions */
+function openLightbox(imgSrc, captionText) {
+  const img = $('#lightbox-img');
+  img.src = imgSrc;
+  $('#lightbox-caption').textContent = captionText;
+  $('#lightbox').classList.add('active');
+}
+function closeLightbox() {
+  $('#lightbox').classList.remove('active');
+}
+
+/* Affirmation / Compliment Generator */
+const compliments = [
+  "\"Sneha, your laugh is literally the quickest mood-booster in existence! 😂\"",
+  "\"You look absolute royalty when dressed up in traditional Garba outfits! 🥻\"",
+  "\"Thank you for being the person who makes everyone feel included and loved. 💖\"",
+  "\"Your chaotic energy makes life 100x more fun! 🌪️\"",
+  "\"You have a golden heart underneath all that cute pagal-ness! ✨\"",
+  "\"Never stop smiling — it genuinely brightens up the world around you. 😊\""
+];
+function generateCompliment() {
+  const card = $('#compliment-text');
+  const rand = compliments[Math.floor(Math.random() * compliments.length)];
+  card.style.opacity = 0;
+  setTimeout(() => {
+    card.textContent = rand;
+    card.style.opacity = 1;
+  }, 200);
+  celebrate(30);
+}
+
+/* Confetti Canvas */
+const cv = $('#confetti'), cx = cv.getContext('2d');
+let parts = [], running = false;
+function size() { cv.width = innerWidth; cv.height = innerHeight; }
+size(); addEventListener('resize', size);
+
+function celebrate(n = 120) {
+  if(reduce) return;
+  const cols = ['#f17ca7','#bd91dc','#ffc477','#8fd3f4','#ff9bb8','#fff1a8'];
+  for(let i = 0; i < n; i++) {
+    parts.push({
+      x: innerWidth/2 + (Math.random()-.5)*200, y: innerHeight*.6,
+      vx: (Math.random()-.5)*16, vy: -Math.random()*17-5, g: .32,
+      w: 6+Math.random()*7, h: 9+Math.random()*9, r: Math.random()*6,
+      vr: (Math.random()-.5)*.4, c: cols[Math.floor(Math.random()*cols.length)],
+      life: 1, heart: Math.random() < .25
+    });
+  }
+  if(!running){ running = true; loop(); }
+}
+
+function loop() {
+  cx.clearRect(0, 0, cv.width, cv.height);
+  parts = parts.filter(p => p.life > 0 && p.y < cv.height + 30);
+  parts.forEach(p => {
+    p.vy += p.g; p.x += p.vx; p.y += p.vy; p.vx *= .99; p.r += p.vr; p.life -= .004;
+    cx.save(); cx.globalAlpha = Math.max(p.life, 0); cx.translate(p.x, p.y); cx.rotate(p.r); cx.fillStyle = p.c;
+    if(p.heart){ cx.font = p.w*2.2+'px serif'; cx.fillText('♥', 0, 0); }
+    else cx.fillRect(-p.w/2, -p.h/2, p.w, p.h);
+    cx.restore();
+  });
+  if(parts.length) requestAnimationFrame(loop);
+  else { running = false; cx.clearRect(0, 0, cv.width, cv.height); }
+}
+
+/* Envelope Letter */
+function openLetter() {
+  $('#envelope').classList.add('open');
+  $('#letter').classList.add('show');
+  $('#tap-hint').textContent = 'A special note, written just for you ♡';
+  celebrate(140);
+  setTimeout(() => $('#letter').scrollIntoView({ behavior: 'smooth', block: 'center' }), 400);
+}
+
+/* Wish Jar */
+const wishes = [
+  'May all your plans work out even better than you imagined! 🌈',
+  'Wishing you a whole year full of laughter and 0% stress! 😄',
+  'May you get everything you secretly wished for on midnight! 💫',
+  'More chai, more cake, and endless fun memories ahead! ☕🍰',
+  'May you always be surrounded by people who adore your soul! 💗',
+  'May your bad days be super short and good days legendary! ✨',
+  'Here\'s to your biggest dreams coming true one by one! 🌟',
+  'Never lose your sparkle, Sneha! 🎀',
+  'A giant birthday hug is on its way to you right now! 🤗'
+];
+let lastW = -1;
+function pullWish() {
+  const j = $('#jarEl'), s = $('#slip');
+  j.classList.remove('shake'); void j.offsetWidth; j.classList.add('shake');
+  let i; do { i = Math.floor(Math.random() * wishes.length); } while(i === lastW);
+  lastW = i;
+  setTimeout(() => {
+    s.textContent = wishes[i];
+    s.classList.remove('pop'); void s.offsetWidth; s.classList.add('pop');
+  }, 300);
+}
+
+/* Cake & Candle blowing */
+const candles = $$('.candle');
+candles.forEach(c => c.addEventListener('click', () => { c.classList.add('out'); check(); }));
+function check() { if(candles.every(c => c.classList.contains('out'))) done(); }
+function done() {
+  $('#wish-text').textContent = 'Wish sent directly to the universe! May every good thing find its way to you, Sneha! 💖';
+  const b = $('#wish-button'); b.textContent = 'Relight & wish again 🔥'; b.onclick = relight;
+  celebrate(180);
+}
+function blowCandles() {
+  candles.forEach((c, i) => setTimeout(() => c.classList.add('out'), i * 250));
+  setTimeout(done, 800);
+}
+function relight() {
+  candles.forEach(c => c.classList.remove('out'));
+  $('#wish-text').textContent = 'Make another wish!';
+  const b = $('#wish-button'); b.textContent = 'I made a wish! ✨'; b.onclick = blowCandles;
+}
+</script>
+</body>
+</html>
